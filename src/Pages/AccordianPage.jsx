@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Accordian from "./components/Accordian";
-
+import Accordian from "../components/Accordian";
+  
 function AccordianPage() {
   const items = [
     {
