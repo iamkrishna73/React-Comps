@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Panel from "./Panel";
 import { GoChevronDown } from "react-icons/go";
 
 const DropDown = ({ options, value, onChange }) => {
@@ -18,7 +18,7 @@ const DropDown = ({ options, value, onChange }) => {
   const renderOptions = options.map((option) => {
     return (
       <div
-        className="hover:bg-sky-100 rounded cursor-pointer p-1"
+        className='hover:bg-sky-100 rounded cursor-pointer p-1'
         onClick={() => handleOptionClick(option)}
         key={option.value}
       >
@@ -32,18 +32,16 @@ const DropDown = ({ options, value, onChange }) => {
     content = value.label;
   }
   return (
-    <div className="w-48 relative">
-      <div
-        className="flex justify-between items-center cursor-pointer border rounded p-3 shadow bg-white v-full"
+    <div className='w-48 relative'>
+      <Panel
+        className='flex justify-between items-center cursor-pointer '
         onClick={handleClick}
       >
         {content}
-        <GoChevronDown className="text-lg" />
-      </div>
+        <GoChevronDown className='text-lg' />
+      </Panel>
       {isOpen && (
-        <div className="absolute top-full border rounded p-3 shadow bg-white w-full">
-          {renderOptions}
-        </div>
+        <Panel className='absolute top-full border'>{renderOptions}</Panel>
       )}
     </div>
   );
