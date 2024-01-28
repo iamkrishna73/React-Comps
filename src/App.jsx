@@ -1,21 +1,10 @@
-import { useState } from "react";
-import DropDown from "./components/DropDown";
+import Link from './components/Link';
 
-function App() { 
-  const options = [
-    { label: "Red", value: "red" },
-    { label: "Black", value: "black" },
-    { label: "Green", value: "green" },
-  ];
-  const [selection, setSelection] = useState(null);
-
-  const handleSelect = (option) => {
-    setSelection(option);
-  };
-
+function App() {
   return (
     <div>
-      <DropDown options={options} value={selection} onChange={handleSelect} />
+      <Link to='/accordion'>Go to accordion</Link>
+      <Link to='/dropdown'>Go to dropdown</Link>
     </div>
   );
 }
