@@ -3,7 +3,6 @@ import NavigationContext from '../context/Navigation';
 
 function Link({ to, children }) {
   const { navigate } = useContext(NavigationContext);
-  console.log(navigate);
 
   const handleClick = (event) => {
     event.preventDefault();
