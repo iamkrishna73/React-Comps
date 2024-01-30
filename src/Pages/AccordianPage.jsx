@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Accordian from "../components/Accordian";
+import Accordion from "../components/Accordion";
   
-function AccordianPage() {
+function AccordionPage() {
   const items = [
     {
       id: "ksk479jsk0",
@@ -22,7 +22,7 @@ function AccordianPage() {
     },
   ];
 
-  return <Accordian items={items} />;
+  return <Accordion items={items} />;
 }
 
-export default AccordianPage;
+export default AccordionPage;
