@@ -1,8 +1,10 @@
-import { useContext } from 'react';
-import NavigationContext from '../context/Navigation';
+import classNames from 'classnames';
+import useNavigaton from '../hooks/use-navigation';
 
 function Link({ to, children }) {
-  const { navigate } = useContext(NavigationContext);
+  const { navigate } = useNavigaton();
+  
+  const classes = classNames('text-blue-500')
 
   const handleClick = (event) => {
     if(event.metakey || event.ctrlkey) {
@@ -11,7 +13,7 @@ function Link({ to, children }) {
     event.preventDefault();
     navigate(to);
   };
-  return <a href={to} onClick={handleClick}> {children}</a>;
+  return <a className={classes} href={to} onClick={handleClick}> {children}</a>;
 }
 
 export default Link;
