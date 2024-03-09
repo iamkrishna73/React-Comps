@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { GoChevronDown, GoChevronLeft } from "react-icons/go";
 
-const Accordian = ({ items }) => {
+const Accordion = ({ items }) => {
   const [expandedIndex, setExpandedIndex] = useState(-1);
 
   const handleClick = (nextIndex) => {
@@ -39,4 +39,4 @@ const Accordian = ({ items }) => {
   return <div className="border-x border-t rounded">{renderList}</div>;
 };
 
-export default Accordian;
+export default Accordion;
