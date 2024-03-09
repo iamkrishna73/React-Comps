@@ -10,13 +10,14 @@ function NavigationProvider({ children }) {
       setCurrentPath(window.location.pathname);
     };
     window.addEventListener('popstate', handler);
-    
+
     return () => {
       window.removeEventListener('popstate', handler);
     };
   }, []);
 
   const navigate = (to) => {
+    /* Update the address bar but doesn't cause a refresh */
     window.history.pushState({}, '', to);
     setCurrentPath(to);
   };
